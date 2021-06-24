@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint --fix"
+    "lint": "ng lint --fix",
+    "lint:styles": "stylelint \"src/**/*.scss\" -f verbose --fix"
   },
   "private": true,
   "dependencies": {
@@ -40,6 +41,8 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "3.4.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
+    "stylelint": "13.13.1",
+    "stylelint-config-standard": "22.0.0",
     "typescript": "4.2.4"
   }
 }
