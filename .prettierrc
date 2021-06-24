@@ -1,0 +1,13 @@
+{
+  "endOfLine": "lf",
+  "printWidth": 140,
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}
