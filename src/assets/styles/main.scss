@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+//
+//
+// BUNDLE STYLES - critical
+// --------------------------------------------------
+
+// layout
+@import "layout/app";
+@import "layout/bootstrap";
+
+// material
+@import "material/material";
