@@ -1,0 +1,19 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// responsive: visible on mobile only
+// --------------------------------------------------
+@mixin mobile {
+  @include media-breakpoint-down(md) {
+    @content;
+  }
+}
+
+// responsive: visible on desktop only
+// --------------------------------------------------
+@mixin desktop {
+  @include media-breakpoint-up(lg) {
+    @content;
+  }
+}

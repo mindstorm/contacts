@@ -1,3 +1,31 @@
-<section>
-  <p class="content">contacts</p>
+<section class="mt-5">
+  <div class="back">
+    <a href="#" class="back__link" [routerLink]="['..']" [class.d-none]="!detailOutlet.isActivated">
+      <span class="material-icons">arrow_back</span>
+    </a>
+
+    <h2 class="back__title">Contacts</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-lg-4 d-lg-block" [class.d-none]="detailOutlet.isActivated">
+      <ul class="list">
+        <li>
+          <a href="#" class="list__item" [routerLink]="['/1']" mat-ripple>Child 1</a>
+        </li>
+        <li>
+          <a href="#" class="list__item" [routerLink]="['/2']" mat-ripple>Child 2</a>
+        </li>
+        <li>
+          <a href="#" class="list__item" [routerLink]="['/3']" mat-ripple>Child 3</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col" [class.d-none]="!detailOutlet.isActivated">
+      <div class="card">
+        <router-outlet #detailOutlet="outlet"></router-outlet>
+      </div>
+    </div>
+  </div>
 </section>

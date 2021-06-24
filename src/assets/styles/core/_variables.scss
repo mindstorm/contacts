@@ -1,0 +1,23 @@
+//
+// CORE | Variables
+// --------------------------------------------------
+
+// text
+$ink: #373737;
+$ink-light: #606060;
+$ink-dark: #000;
+
+// background
+$background-surface: #fff;
+$background-surface-hover: rgb(240, 240, 240);
+$background-surface-activated: rgb(225, 225, 225);
+
+// animation
+$duration-s: 150ms;
+$timing-default: cubic-bezier(0.35, 0, 0.25, 1);
+$timing-entrance: cubic-bezier(0, 0, 0.2, 1);
+
+// components
+$box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.02), 0 2px 8px 0 rgba(0, 0, 0, 0.02);
+$divider: 1px solid rgba($ink, 0.12);
+$border-radius: 8px;

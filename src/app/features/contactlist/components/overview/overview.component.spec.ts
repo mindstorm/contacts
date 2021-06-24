@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { OverviewComponent } from './overview.component';
 
@@ -9,6 +10,7 @@ describe('OverviewComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [OverviewComponent],
+      imports: [RouterTestingModule],
     }).compileComponents();
   });
 
@@ -20,10 +22,5 @@ describe('OverviewComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should render title', () => {
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content').textContent).toContain('contacts');
   });
 });

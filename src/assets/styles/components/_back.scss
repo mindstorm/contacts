@@ -1,0 +1,24 @@
+//
+// COMPONENTS | Back
+// --------------------------------------------------
+
+.back {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+
+  &__link {
+    display: inline-flex;
+    margin-right: 8px;
+    padding-right: 8px;
+    border-right: $divider;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+}

@@ -4,8 +4,25 @@
 
 body {
   min-width: 320px;
+  background-color: #f7f7f7;
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: $ink-light;
+  text-decoration: none;
+  transition: color $duration-s $timing-entrance;
+
+  &:active,
+  &:visited,
+  &:focus {
+    color: $ink-light;
+  }
+
+  &:hover {
+    color: $ink-dark;
+  }
 }
