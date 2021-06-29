@@ -1,0 +1,16 @@
+//
+// MATERIAL | Form Field
+// --------------------------------------------------
+
+.mat-form-field {
+  .mat-form-field-prefix {
+    margin-top: 6px;
+    align-self: flex-start;
+
+    .material-icons {
+      display: block;
+      margin-right: 8px;
+      color: $ink-light;
+    }
+  }
+}

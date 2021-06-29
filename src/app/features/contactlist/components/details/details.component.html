@@ -4,7 +4,10 @@
       <ng-container *ngFor="let field of displayFields">
         <div class="display-field row align-items-center">
           <div class="display-field-label col-12 col-lg-3">{{ field.label }}</div>
-          <div class="display-field-value col-12 col-lg-9">{{ getValue(contact, field.key) }}</div>
+          <div class="display-field-value col-12 col-lg-9">
+            <div class="material-icons" *ngIf="field.icon">{{ field.icon }}</div>
+            <span>{{ getValue(contact, field.key) }}</span>
+          </div>
         </div>
       </ng-container>
     </div>

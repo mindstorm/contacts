@@ -13,7 +13,14 @@
   }
 
   &-value {
+    display: flex;
     color: $ink-dark;
+    flex-wrap: wrap;
+
+    .material-icons {
+      margin-right: 8px;
+      color: $ink-light;
+    }
   }
 
   & + & {

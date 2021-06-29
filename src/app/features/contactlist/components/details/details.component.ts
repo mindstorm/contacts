@@ -6,13 +6,19 @@ import { Store } from '@ngrx/store';
 import { Contact } from 'src/app/models';
 import { getContact, selectContact } from 'src/app/store/contact.store';
 
+interface DisplayField {
+  key: string;
+  label: string;
+  icon?: string;
+}
+
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
 })
 export class DetailsComponent implements OnInit {
   public contact$ = this.store.select(selectContact);
-  public displayFields = [
+  public displayFields: DisplayField[] = [
     {
       key: 'firstName',
       label: 'First Name',
@@ -24,14 +30,17 @@ export class DetailsComponent implements OnInit {
     {
       key: 'email',
       label: 'E-Mail',
+      icon: 'mail',
     },
     {
       key: 'phone',
       label: 'Phone',
+      icon: 'phone',
     },
     {
       key: 'address',
       label: 'Address',
+      icon: 'place',
     },
   ];
 
