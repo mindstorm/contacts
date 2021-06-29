@@ -8,7 +8,7 @@ export const CONTACTLIST_ROUTES: Routes = [
     component: OverviewComponent,
     children: [
       {
-        path: ':id',
+        path: ':uuid',
         component: DetailsComponent,
       },
     ],

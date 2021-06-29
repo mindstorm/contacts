@@ -2,7 +2,11 @@ import { Component } from '@angular/core';
 
 import { MatDialog } from '@angular/material/dialog';
 
+import { Store } from '@ngrx/store';
+import { v4 as uuidv4 } from 'uuid';
+
 import { Contact } from 'src/app/models';
+import { addContact, selectContacts } from 'src/app/store/contact.store';
 import { EditDialogComponent } from './../dialog/edit-dialog.component';
 
 @Component({
@@ -10,7 +14,9 @@ import { EditDialogComponent } from './../dialog/edit-dialog.component';
   templateUrl: './overview.component.html',
 })
 export class OverviewComponent {
-  constructor(public dialog: MatDialog) {}
+  public contacts$ = this.store.select(selectContacts);
+
+  constructor(public readonly dialog: MatDialog, private readonly store: Store) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EditDialogComponent, {
@@ -18,8 +24,12 @@ export class OverviewComponent {
       data: {},
     });
 
-    dialogRef.afterClosed().subscribe((result: Contact) => {
-      console.log(result);
+    dialogRef.afterClosed().subscribe((contact: Contact) => {
+      if (contact) {
+        contact.uuid = uuidv4();
+
+        this.store.dispatch(addContact({ contact }));
+      }
     });
   }
 }

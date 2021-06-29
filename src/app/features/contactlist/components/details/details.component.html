@@ -1,1 +1,9 @@
-<p>details works! for {{ id }}</p>
+<div class="card">
+  <ng-container *ngIf="contact$ | async as contact; else noItem">
+    {{ contact | json }}
+  </ng-container>
+
+  <ng-template #noItem>
+    <div class="message is-error">Item not found!</div>
+  </ng-template>
+</div>

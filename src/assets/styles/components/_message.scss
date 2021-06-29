@@ -1,0 +1,43 @@
+//
+// COMPONENTS | Message
+// --------------------------------------------------
+
+.message {
+  display: flex;
+  align-items: flex-start;
+
+  &::before {
+    display: block;
+    margin-right: 8px;
+    margin-left: -4px;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    letter-spacing: normal;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    font-family: "Material Icons", serif;
+    line-height: 1;
+    direction: ltr;
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  &.is-error {
+    color: $error-ink;
+
+    &::before {
+      content: "error";
+    }
+  }
+
+  &.is-info {
+    color: $info-ink;
+
+    &::before {
+      content: "info";
+    }
+  }
+}

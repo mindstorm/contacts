@@ -4,28 +4,38 @@
       <span class="material-icons">arrow_back</span>
     </a>
 
-    <h2 class="back__title">Contacts</h2>
+    <h2 class="back__title">
+      <a href="#" [routerLink]="['/']">Contacts</a>
+    </h2>
   </div>
 
   <div class="row">
     <div class="col-12 col-lg-4 d-lg-block" [class.d-none]="detailOutlet.isActivated">
       <ul class="list">
-        <li>
-          <a href="#" class="list__item" [routerLink]="['/1']" mat-ripple>Child 1</a>
-        </li>
-        <li>
-          <a href="#" class="list__item" [routerLink]="['/2']" mat-ripple>Child 2</a>
-        </li>
-        <li>
-          <a href="#" class="list__item" [routerLink]="['/3']" mat-ripple>Child 3</a>
-        </li>
+        <ng-container *ngIf="contacts$ | async as contacts">
+          <ng-container *ngFor="let item of contacts">
+            <li>
+              <a href="#" class="list__item" [routerLink]="[item.uuid]" routerLinkActive="is-active" mat-ripple>
+                <span>{{ item.firstName }} {{ item.lastName }}</span>
+              </a>
+            </li>
+          </ng-container>
+
+          <ng-container *ngIf="!contacts.length">
+            <li>
+              <div class="list__item">
+                <div class="message is-info">
+                  <span>No items found</span>
+                </div>
+              </div>
+            </li>
+          </ng-container>
+        </ng-container>
       </ul>
     </div>
 
     <div class="col" [class.d-none]="!detailOutlet.isActivated">
-      <div class="card">
-        <router-outlet #detailOutlet="outlet"></router-outlet>
-      </div>
+      <router-outlet #detailOutlet="outlet"></router-outlet>
     </div>
   </div>
 

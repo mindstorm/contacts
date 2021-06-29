@@ -33,5 +33,14 @@
         color: $ink-dark;
       }
     }
+
+    &.is-active {
+      color: $ink-dark;
+      font-weight: bold;
+
+      @include desktop {
+        background-color: $background-surface-active;
+      }
+    }
   }
 }
