@@ -36,5 +36,8 @@ $contacts-theme: mat.define-light-theme(
 // passed to `define-light-theme` omits typography, `button-theme` will not
 // emit any typography styles.
 @include mat.button-theme($contacts-theme);
+@include mat.dialog-theme($contacts-theme);
+@include mat.form-field-theme($contacts-theme);
+@include mat.input-theme($contacts-theme);
 
 // Include the theme mixins for other components you use here.

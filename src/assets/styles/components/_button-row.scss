@@ -1,0 +1,44 @@
+//
+// LAYOUT BLOCK | Button Row
+// --------------------------------------------------
+
+.button-row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include desktop {
+    flex-direction: row-reverse;
+  }
+
+  .mat-button-base {
+    flex: 1;
+    margin: 0 0 8px 0;
+    max-width: 100%;
+
+    @include desktop {
+      flex: 0 0 auto;
+      margin: 0 8px 0 0;
+      max-width: 100%;
+      width: auto;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+
+      @include desktop {
+        margin-right: 8px;
+      }
+    }
+
+    &:first-of-type {
+      @include desktop {
+        margin-right: 0;
+      }
+    }
+
+    .mat-button-wrapper {
+      text-transform: uppercase;
+    }
+  }
+}
