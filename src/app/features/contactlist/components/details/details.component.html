@@ -1,6 +1,13 @@
 <div class="card">
   <ng-container *ngIf="contact$ | async as contact; else noItem">
-    {{ contact | json }}
+    <div class="flex-fill">
+      <ng-container *ngFor="let field of displayFields">
+        <div class="display-field row align-items-center">
+          <div class="display-field-label col-12 col-lg-3">{{ field.label }}</div>
+          <div class="display-field-value col-12 col-lg-9">{{ getValue(contact, field.key) }}</div>
+        </div>
+      </ng-container>
+    </div>
   </ng-container>
 
   <ng-template #noItem>

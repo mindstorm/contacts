@@ -1,0 +1,22 @@
+//
+// COMPONENTS | Display Field
+// --------------------------------------------------
+
+.display-field {
+  &-label {
+    // font-weight: bold;
+    font-size: smaller;
+
+    @include desktop {
+      color: $ink-dark;
+    }
+  }
+
+  &-value {
+    color: $ink-dark;
+  }
+
+  & + & {
+    margin-top: 16px;
+  }
+}
