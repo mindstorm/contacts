@@ -8,8 +8,8 @@
 @import "core/mixins";
 
 // layout
-@import "layout/app";
 @import "layout/bootstrap";
+@import "layout/app";
 
 // material
 @import "material/material";
@@ -18,3 +18,4 @@
 @import "components/back";
 @import "components/card";
 @import "components/list";
+@import "components/fab";
