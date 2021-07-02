@@ -6,7 +6,7 @@ export const CONTACTS_FEATURE_NAME = 'contacts';
 
 // STATE
 // --------------------------------------------------
-interface ContactsState {
+export interface ContactsState {
   contacts: Contact[];
   selectedContact?: Contact;
 }
@@ -26,7 +26,7 @@ export const getContact = createAction('[Contacts] Get Contact', props<{ uuid: s
 
 // REDUCERS
 // --------------------------------------------------
-export const reducer = createReducer<ContactsState>(
+export const contactsReducer = createReducer<ContactsState>(
   initialState,
 
   on(addContact, (state, { contact }) => ({

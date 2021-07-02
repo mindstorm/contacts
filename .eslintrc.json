@@ -9,8 +9,10 @@
         "createDefaultProgram": true
       },
       "extends": ["plugin:@angular-eslint/recommended", "prettier", "plugin:prettier/recommended"],
-      "plugins": ["simple-import-sort"],
+      "plugins": ["simple-import-sort", "unused-imports"],
       "rules": {
+        "no-warning-comments": "warn",
+        "unused-imports/no-unused-imports": "error",
         "@angular-eslint/directive-selector": [
           "error",
           {

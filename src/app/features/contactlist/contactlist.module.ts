@@ -8,5 +8,6 @@ import { CONTACTLIST_ROUTES } from './contactlist.routes';
 @NgModule({
   declarations: [OverviewComponent, DetailsComponent, EditDialogComponent],
   imports: [SharedModule, RouterModule.forChild(CONTACTLIST_ROUTES)],
+  entryComponents: [EditDialogComponent],
 })
 export class ContactlistModule {}

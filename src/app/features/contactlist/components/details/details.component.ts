@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Store } from '@ngrx/store';
 
-import { Contact } from 'src/app/models';
 import { getContact, selectContact } from 'src/app/store/contact.store';
 
 interface DisplayField {

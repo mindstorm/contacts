@@ -1,54 +1,56 @@
-<form [formGroup]="editForm">
-  <h1 mat-dialog-title>New Contact</h1>
-  <div mat-dialog-content>
-    <div class="row">
-      <div class="col">
-        <mat-form-field appearance="fill" class="d-block">
-          <mat-label>First Name</mat-label>
-          <input type="text" matInput formControlName="firstName" required />
-        </mat-form-field>
+<section id="dialog_edit">
+  <form [formGroup]="editForm">
+    <h1 mat-dialog-title>New Contact</h1>
+    <div mat-dialog-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="fill" class="d-block">
+            <mat-label>First Name</mat-label>
+            <input type="text" matInput formControlName="firstName" required />
+          </mat-form-field>
+        </div>
+
+        <div class="col">
+          <mat-form-field appearance="fill" class="d-block">
+            <mat-label>Last Name</mat-label>
+            <input type="text" matInput formControlName="lastName" required />
+          </mat-form-field>
+        </div>
       </div>
 
-      <div class="col">
-        <mat-form-field appearance="fill" class="d-block">
-          <mat-label>Last Name</mat-label>
-          <input type="text" matInput formControlName="lastName" required />
-        </mat-form-field>
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="fill" class="d-block">
+            <mat-label>Phone</mat-label>
+            <input type="text" matInput formControlName="phone" />
+            <div class="material-icons" matPrefix>phone</div>
+          </mat-form-field>
+        </div>
+
+        <div class="col">
+          <mat-form-field appearance="fill" class="d-block">
+            <mat-label>E-Mail</mat-label>
+            <input type="text" matInput formControlName="email" />
+            <div class="material-icons" matPrefix>mail</div>
+          </mat-form-field>
+        </div>
       </div>
+
+      <mat-form-field appearance="fill" class="d-block">
+        <mat-label>Address</mat-label>
+        <textarea matInput formControlName="address"></textarea>
+        <div class="material-icons" matPrefix>place</div>
+      </mat-form-field>
     </div>
 
-    <div class="row">
-      <div class="col">
-        <mat-form-field appearance="fill" class="d-block">
-          <mat-label>Phone</mat-label>
-          <input type="text" matInput formControlName="phone" />
-          <div class="material-icons" matPrefix>phone</div>
-        </mat-form-field>
-      </div>
+    <div class="button-row mt-4">
+      <button type="submit" mat-flat-button color="primary" [mat-dialog-close]="editForm.value" [disabled]="editForm.invalid">
+        <span>Add Contact</span>
+      </button>
 
-      <div class="col">
-        <mat-form-field appearance="fill" class="d-block">
-          <mat-label>E-Mail</mat-label>
-          <input type="text" matInput formControlName="email" />
-          <div class="material-icons" matPrefix>mail</div>
-        </mat-form-field>
-      </div>
+      <button mat-button (click)="cancelDialog()">
+        <span>Cancel</span>
+      </button>
     </div>
-
-    <mat-form-field appearance="fill" class="d-block">
-      <mat-label>Address</mat-label>
-      <textarea matInput formControlName="address"></textarea>
-      <div class="material-icons" matPrefix>place</div>
-    </mat-form-field>
-  </div>
-
-  <div class="button-row mt-4">
-    <button type="submit" mat-flat-button color="primary" [mat-dialog-close]="editForm.value" [disabled]="editForm.invalid">
-      <span>Add Contact</span>
-    </button>
-
-    <button mat-button (click)="cancelDialog()">
-      <span>Cancel</span>
-    </button>
-  </div>
-</form>
+  </form>
+</section>

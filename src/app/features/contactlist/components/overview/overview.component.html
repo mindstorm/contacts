@@ -1,4 +1,4 @@
-<section class="mt-5">
+<section class="overview mt-5">
   <div class="back">
     <a href="#" class="back__link" [routerLink]="['..']" [class.d-none]="!detailOutlet.isActivated">
       <span class="material-icons">arrow_back</span>
@@ -24,7 +24,7 @@
           <ng-container *ngIf="!contacts.length">
             <li>
               <div class="list__item">
-                <div class="message is-info">
+                <div id="message_empty" class="message is-info">
                   <span>No items found</span>
                 </div>
               </div>
@@ -41,7 +41,7 @@
 
   <div class="fab-container">
     <div class="container d-flex justify-content-end">
-      <button mat-fab color="primary" (click)="openDialog()">
+      <button id="button_add" mat-fab color="primary" (click)="openDialog()">
         <div class="material-icons">add</div>
       </button>
     </div>

@@ -18,7 +18,7 @@ export class OverviewComponent {
 
   constructor(public readonly dialog: MatDialog, private readonly store: Store) {}
 
-  openDialog(): void {
+  public openDialog(): void {
     const dialogRef = this.dialog.open(EditDialogComponent, {
       width: '500px',
       data: {},
