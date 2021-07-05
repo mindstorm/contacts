@@ -43,4 +43,12 @@
       }
     }
   }
+
+  &__divider {
+    padding: 8px 24px;
+    background-color: $background-surface-divider;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1;
+  }
 }

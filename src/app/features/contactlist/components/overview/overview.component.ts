@@ -36,4 +36,11 @@ export class OverviewComponent {
   public contactTrackBy(index: number, contact: Contact) {
     return contact.uuid;
   }
+
+  public showDivider(item: Contact, prevItem: Contact): string | boolean {
+    const actLetter = item.lastName[0].toUpperCase();
+    const prevLetter = prevItem?.lastName[0].toUpperCase();
+
+    return actLetter !== prevLetter ? actLetter : false;
+  }
 }

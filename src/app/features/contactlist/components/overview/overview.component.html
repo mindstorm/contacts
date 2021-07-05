@@ -13,7 +13,9 @@
     <div class="col-12 col-lg-4 d-lg-block" [class.d-none]="detailOutlet.isActivated">
       <ul class="list">
         <ng-container *ngIf="contacts$ | async as contacts">
-          <ng-container *ngFor="let item of contacts | sortContacts; trackBy: contactTrackBy">
+          <ng-container *ngFor="let item of contacts | sortContacts as sortedItems; trackBy: contactTrackBy; let i = index">
+            <li class="list__divider" *ngIf="showDivider(item, sortedItems[i - 1]) as letter">{{ letter }}</li>
+
             <li>
               <a href="#" class="list__item" [routerLink]="[item.uuid]" routerLinkActive="is-active" mat-ripple>
                 <span>{{ item.lastName }}, {{ item.firstName }}</span>
