@@ -7,6 +7,6 @@ import { Contact } from 'src/app/models';
 })
 export class SortContactsPipe implements PipeTransform {
   transform(contacts: Contact[]): Contact[] {
-    return [...contacts].sort((a: Contact, b: Contact) => (a.lastName > b.lastName ? 1 : -1));
+    return [...contacts].sort((a: Contact, b: Contact) => (a.lastName.toLowerCase() > b.lastName.toLowerCase() ? 1 : -1));
   }
 }
