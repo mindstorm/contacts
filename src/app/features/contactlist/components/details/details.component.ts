@@ -54,4 +54,8 @@ export class DetailsComponent implements OnInit {
   public getValue(item: any, attr: string) {
     return item[attr] !== '' ? item[attr] : '-';
   }
+
+  public fieldTrackBy(index: number, field: DisplayField) {
+    return field.key;
+  }
 }

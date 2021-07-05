@@ -13,7 +13,7 @@
     <div class="col-12 col-lg-4 d-lg-block" [class.d-none]="detailOutlet.isActivated">
       <ul class="list">
         <ng-container *ngIf="contacts$ | async as contacts">
-          <ng-container *ngFor="let item of contacts">
+          <ng-container *ngFor="let item of contacts; trackBy: contactTrackBy">
             <li>
               <a href="#" class="list__item" [routerLink]="[item.uuid]" routerLinkActive="is-active" mat-ripple>
                 <span>{{ item.firstName }} {{ item.lastName }}</span>

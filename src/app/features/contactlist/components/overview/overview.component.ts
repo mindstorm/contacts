@@ -32,4 +32,8 @@ export class OverviewComponent {
       }
     });
   }
+
+  public contactTrackBy(index: number, contact: Contact) {
+    return contact.uuid;
+  }
 }
