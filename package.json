@@ -1,6 +1,6 @@
 {
   "name": "contacts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,7 +15,8 @@
     "lint": "npm-run-all --parallel lint:*",
     "lint:html": "htmlhint \"src/**/*.html\" --nocolor",
     "lint:scss": "stylelint \"src/**/*.scss\" -f verbose --fix",
-    "lint:ts": "ng lint --fix"
+    "lint:ts": "ng lint --fix",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "private": true,
   "dependencies": {
@@ -56,6 +57,7 @@
     "@typescript-eslint/eslint-plugin": "4.28.1",
     "@typescript-eslint/parser": "4.28.1",
     "chalk": "2.4.2",
+    "conventional-changelog-cli": "2.1.1",
     "eslint": "7.30.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "3.4.0",
