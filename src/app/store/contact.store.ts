@@ -1,5 +1,6 @@
 import { createAction, createFeatureSelector, createReducer, createSelector, on, props } from '@ngrx/store';
 
+import { environment } from 'src/environments/environment';
 import { Contact } from '../models';
 
 export const CONTACTS_FEATURE_NAME = 'contacts';
@@ -12,11 +13,13 @@ export interface ContactsState {
 }
 
 const initialState: ContactsState = {
-  contacts: [
-    { firstName: 'Max', lastName: 'Muster 1', phone: '', email: '', address: '', uuid: '525043a8-c2f8-4f89-8ecc-3a264f47348b' },
-    { firstName: 'Max', lastName: 'Muster 2', phone: '', email: '', address: '', uuid: 'ac26dca8-014c-4fea-b3df-6027378bdcd8' },
-    { firstName: 'Max', lastName: 'Muster 3', phone: '', email: '', address: '', uuid: 'ac26dca8-014c-4fea-b3df-6027378bdcd9' },
-  ],
+  contacts: environment.production
+    ? []
+    : [
+        { firstName: 'Max', lastName: 'Zuster 1', phone: '', email: '', address: '', uuid: '525043a8-c2f8-4f89-8ecc-3a264f47348b' },
+        { firstName: 'Max', lastName: 'Auster 2', phone: '', email: '', address: '', uuid: 'ac26dca8-014c-4fea-b3df-6027378bdcd8' },
+        { firstName: 'Max', lastName: 'Muster 3', phone: '', email: '', address: '', uuid: 'ac26dca8-014c-4fea-b3df-6027378bdcd9' },
+      ],
 };
 
 // ACTIONS
