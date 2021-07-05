@@ -17,8 +17,4 @@ export class EditDialogComponent {
   });
 
   constructor(public dialogRef: MatDialogRef<EditDialogComponent>) {}
-
-  cancelDialog(): void {
-    this.dialogRef.close();
-  }
 }

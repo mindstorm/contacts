@@ -44,11 +44,18 @@
     </div>
 
     <div class="button-row mt-4">
-      <button type="submit" mat-flat-button color="primary" [mat-dialog-close]="editForm.value" [disabled]="editForm.invalid">
+      <button
+        id="button_submit"
+        type="submit"
+        mat-flat-button
+        color="primary"
+        [mat-dialog-close]="editForm.value"
+        [disabled]="editForm.invalid"
+      >
         <span>Add Contact</span>
       </button>
 
-      <button mat-button (click)="cancelDialog()">
+      <button id="button_cancel" mat-button mat-dialog-close>
         <span>Cancel</span>
       </button>
     </div>
