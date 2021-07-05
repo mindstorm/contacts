@@ -7,11 +7,14 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 
+import { SortContactsPipe } from './pipes';
+
 const MODULES = [CommonModule, MatRippleModule, MatButtonModule, MatDialogModule, ReactiveFormsModule, MatInputModule];
+const DECLARATIONS = [SortContactsPipe];
 
 @NgModule({
-  declarations: [],
+  declarations: [DECLARATIONS],
   imports: [MODULES],
-  exports: [MODULES],
+  exports: [MODULES, DECLARATIONS],
 })
 export class SharedModule {}
