@@ -1,4 +1,8 @@
-# 1.1.0 (2021-07-05)
+## [1.1.1](https://github.com/mindstorm/contacts/compare/1.1.0...1.1.1) (2021-07-06)
+
+
+
+# [1.1.0](https://github.com/mindstorm/contacts/compare/1.0.0...1.1.0) (2021-07-05)
 
 
 ### Bug Fixes
@@ -16,7 +20,7 @@
 
 
 
-# 1.0.0 (2021-07-05)
+# [1.0.0](https://github.com/mindstorm/contacts/compare/ea51511d2a56a7e336f0910b1bfbac00b5d24766...1.0.0) (2021-07-05)
 
 
 ### Features
