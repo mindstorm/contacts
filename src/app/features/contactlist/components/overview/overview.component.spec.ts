@@ -5,7 +5,7 @@ import { By } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { of } from 'rxjs';
@@ -20,7 +20,7 @@ import { OverviewComponent } from './overview.component';
 export class MatDialogMock {
   open() {
     return {
-      afterClosed: () => of([]),
+      afterClosed: () => of({}),
     };
   }
 }
@@ -126,21 +126,46 @@ describe('OverviewComponent', () => {
     expect(location.path()).toBe(`/${initalContacts[0].uuid}`);
   }));
 
-  it('fab button click', () => {
+  it('fab button click to open the dialog', () => {
     jest.spyOn(component, 'openDialog');
+    jest.spyOn(dialog, 'open');
 
     // click button
     const button: DebugElement = debugElement.query(By.css('#button_add'));
     button.nativeElement.click();
 
     expect(component.openDialog).toHaveBeenCalled();
+    expect(dialog.open).toHaveBeenCalled();
   });
 
-  it('open the edit dialog', () => {
-    jest.spyOn(dialog, 'open');
+  it('recieve data from the dialog', () => {
+    const storeSpy = jest.spyOn(store, 'dispatch');
 
     component.openDialog();
 
-    expect(dialog.open).toHaveBeenCalled();
+    // value from dialog should be enriched with UUID dispatched to store
+    expect(storeSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        type: '[Contacts] Add Contact',
+        contact: expect.objectContaining({
+          uuid: expect.any(String),
+        }),
+      })
+    );
+  });
+
+  it('recieve no data from the dialog', () => {
+    const storeSpy = jest.spyOn(store, 'dispatch');
+    const dialogSpy = jest.spyOn(dialog, 'open');
+
+    // change the return value from the dialog
+    dialogSpy.mockReturnValue({
+      afterClosed: () => of(''),
+    } as MatDialogRef<typeof component>);
+
+    component.openDialog();
+
+    // no dispatch should happen
+    expect(storeSpy).not.toHaveBeenCalled();
   });
 });
