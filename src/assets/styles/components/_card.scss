@@ -5,10 +5,9 @@
 .card {
   display: flex;
   padding: 24px;
-  border: 1px solid rgba(112, 112, 112, 0.12);
+  border: $box-border;
   border-radius: 10px;
-  background: #fff;
+  background: $background-surface;
   box-shadow: $box-shadow;
-  color: #707070;
   text-decoration: none;
 }

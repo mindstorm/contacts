@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  border: 1px solid rgba(112, 112, 112, 0.12);
+  border: $box-border;
   border-radius: $border-radius;
   background: $background-surface;
   box-shadow: $box-shadow;
@@ -17,6 +17,10 @@
 
   li + li {
     border-top: $divider;
+
+    &.list__divider {
+      border-top: none;
+    }
   }
 
   &__item {
@@ -30,12 +34,12 @@
 
       &:hover {
         background-color: $background-surface-hover;
-        color: $ink-dark;
+        color: $ink-900;
       }
     }
 
     &.is-active {
-      color: $ink-dark;
+      color: $ink-900;
       font-weight: bold;
 
       @include desktop {

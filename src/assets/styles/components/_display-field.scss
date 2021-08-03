@@ -8,18 +8,18 @@
     font-size: smaller;
 
     @include desktop {
-      color: $ink-dark;
+      color: $ink-900;
     }
   }
 
   &-value {
     display: flex;
-    color: $ink-dark;
+    color: $ink-900;
     flex-wrap: wrap;
 
     .material-icons {
       margin-right: 8px;
-      color: $ink-light;
+      color: $ink-200;
     }
   }
 

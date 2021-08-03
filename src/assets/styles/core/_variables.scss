@@ -3,15 +3,16 @@
 // --------------------------------------------------
 
 // text
-$ink: #373737;
-$ink-light: #606060;
-$ink-dark: #000;
+$ink-200: rgb(155, 155, 155);
+$ink-500: rgb(55, 55, 55);
+$ink-900: rgb(22, 22, 22);
 
 // background
-$background-surface: #fff;
+$background-primary: rgb(247, 247, 247);
+$background-surface: rgb(255, 255, 255);
 $background-surface-hover: rgb(240, 240, 240);
 $background-surface-active: rgb(225, 225, 225);
-$background-surface-divider: rgb(205, 205, 205);
+$background-surface-divider: rgb(235, 235, 235);
 
 // animation
 $duration-s: 150ms;
@@ -19,10 +20,11 @@ $timing-default: cubic-bezier(0.35, 0, 0.25, 1);
 $timing-entrance: cubic-bezier(0, 0, 0.2, 1);
 
 // components
+$divider: 1px solid rgba($ink-500, 0.12);
+$box-border: 1px solid $divider;
 $box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.02), 0 2px 8px 0 rgba(0, 0, 0, 0.02);
-$divider: 1px solid rgba($ink, 0.12);
 $border-radius: 8px;
 
 // message
-$info-ink: #044868;
-$error-ink: #73000c;
+$info-ink: rgb(4, 72, 104);
+$error-ink: rgb(115, 0, 12);

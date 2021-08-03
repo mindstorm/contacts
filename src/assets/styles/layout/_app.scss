@@ -5,7 +5,7 @@
 body {
   margin: 0;
   min-width: 375px;
-  background-color: #f7f7f7;
+  background-color: $background-primary;
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -13,17 +13,17 @@ body {
 }
 
 a {
-  color: $ink-light;
+  color: $ink-200;
   text-decoration: none;
   transition: color $duration-s $timing-entrance;
 
   &:active,
   &:visited,
   &:focus {
-    color: $ink-light;
+    color: $ink-200;
   }
 
   &:hover {
-    color: $ink-dark;
+    color: $ink-900;
   }
 }
