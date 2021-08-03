@@ -16,7 +16,7 @@
   list-style: none;
 
   li + li {
-    border-top: $divider;
+    border-top: $box-border;
 
     &.list__divider {
       border-top: none;

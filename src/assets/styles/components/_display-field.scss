@@ -4,12 +4,8 @@
 
 .display-field {
   &-label {
-    // font-weight: bold;
+    color: $ink-300;
     font-size: smaller;
-
-    @include desktop {
-      color: $ink-900;
-    }
   }
 
   &-value {
@@ -25,5 +21,7 @@
 
   & + & {
     margin-top: 16px;
+    padding-top: 16px;
+    border-top: $box-border;
   }
 }

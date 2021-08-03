@@ -11,7 +11,7 @@
     display: inline-flex;
     margin-right: 8px;
     padding-right: 8px;
-    border-right: $divider;
+    border-right: $box-border;
 
     @include desktop {
       display: none;

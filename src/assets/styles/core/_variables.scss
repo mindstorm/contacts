@@ -4,6 +4,7 @@
 
 // text
 $ink-200: rgb(155, 155, 155);
+$ink-300: rgb(115, 115, 115);
 $ink-500: rgb(55, 55, 55);
 $ink-900: rgb(22, 22, 22);
 
@@ -20,8 +21,7 @@ $timing-default: cubic-bezier(0.35, 0, 0.25, 1);
 $timing-entrance: cubic-bezier(0, 0, 0.2, 1);
 
 // components
-$divider: 1px solid rgba($ink-500, 0.12);
-$box-border: 1px solid $divider;
+$box-border: 1px solid rgba($ink-500, 0.12);
 $box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.02), 0 2px 8px 0 rgba(0, 0, 0, 0.02);
 $border-radius: 8px;
 

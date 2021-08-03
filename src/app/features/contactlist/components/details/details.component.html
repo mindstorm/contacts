@@ -3,9 +3,9 @@
     <ng-container *ngIf="contact$ | async as contact; else noItem">
       <div class="flex-fill">
         <ng-container *ngFor="let field of displayFields; trackBy: fieldTrackBy">
-          <div class="display-field row align-items-center">
-            <div class="display-field-label col-12 col-lg-3">{{ field.label }}</div>
-            <div class="display-field-value col-12 col-lg-9">
+          <div class="display-field">
+            <div class="display-field-label mb-1">{{ field.label }}</div>
+            <div class="display-field-value">
               <div class="material-icons" *ngIf="field.icon">{{ field.icon }}</div>
               <span>{{ getValue(contact, field.key) }}</span>
             </div>
