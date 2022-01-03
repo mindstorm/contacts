@@ -68,7 +68,7 @@ describe('EditDialogComponent', () => {
     fixture.detectChanges();
 
     // button must be enabled
-    expect(button.attributes).toHaveProperty('disabled', null);
+    expect(button.attributes).not.toHaveProperty('disabled', 'true');
 
     // submit
     button.nativeElement.click();
