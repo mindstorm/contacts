@@ -6,8 +6,7 @@ import { DetailsComponent, EditDialogComponent, OverviewComponent } from './comp
 import { CONTACTLIST_ROUTES } from './contactlist.routes';
 
 @NgModule({
-  declarations: [OverviewComponent, DetailsComponent, EditDialogComponent],
-  imports: [SharedModule, RouterModule.forChild(CONTACTLIST_ROUTES)],
-  entryComponents: [EditDialogComponent],
+    declarations: [OverviewComponent, DetailsComponent, EditDialogComponent],
+    imports: [SharedModule, RouterModule.forChild(CONTACTLIST_ROUTES)]
 })
 export class ContactlistModule {}

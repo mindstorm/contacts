@@ -29,10 +29,11 @@ describe('DetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DetailsComponent],
-      imports: [RouterTestingModule, SharedModule],
-      providers: [provideMockStore()],
-    }).compileComponents();
+    declarations: [DetailsComponent],
+    imports: [RouterTestingModule, SharedModule],
+    providers: [provideMockStore()],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   });
 
   beforeEach(() => {

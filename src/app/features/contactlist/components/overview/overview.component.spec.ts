@@ -44,25 +44,26 @@ describe('OverviewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [OverviewComponent, DetailsComponent, EditDialogComponent],
-      imports: [
+    declarations: [OverviewComponent, DetailsComponent, EditDialogComponent],
+    imports: [
         RouterTestingModule.withRoutes([
-          {
-            path: ':uuid',
-            component: DetailsComponent,
-          },
+            {
+                path: ':uuid',
+                component: DetailsComponent,
+            },
         ]),
         SharedModule,
         NoopAnimationsModule,
-      ],
-      providers: [
+    ],
+    providers: [
         provideMockStore(),
         {
-          provide: MatDialog,
-          useClass: MatDialogMock,
+            provide: MatDialog,
+            useClass: MatDialogMock,
         },
-      ],
-    }).compileComponents();
+    ],
+    teardown: { destroyAfterEach: false }
+}).compileComponents();
   });
 
   beforeEach(() => {
