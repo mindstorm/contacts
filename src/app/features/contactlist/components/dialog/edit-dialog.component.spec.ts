@@ -15,18 +15,18 @@ describe('EditDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    declarations: [EditDialogComponent],
-    imports: [SharedModule, NoopAnimationsModule],
-    providers: [
+      declarations: [EditDialogComponent],
+      imports: [SharedModule, NoopAnimationsModule],
+      providers: [
         {
-            provide: MatDialogRef,
-            useValue: {
-                close: () => { },
-            },
+          provide: MatDialogRef,
+          useValue: {
+            close: () => {},
+          },
         },
-    ],
-    teardown: { destroyAfterEach: false }
-}).compileComponents();
+      ],
+      teardown: { destroyAfterEach: false },
+    }).compileComponents();
   });
 
   beforeEach(() => {
