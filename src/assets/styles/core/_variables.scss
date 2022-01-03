@@ -1,19 +1,18 @@
-//
 // CORE | Variables
 // --------------------------------------------------
 
 // text
-$ink-200: rgb(155, 155, 155);
-$ink-300: rgb(115, 115, 115);
-$ink-500: rgb(55, 55, 55);
-$ink-900: rgb(22, 22, 22);
+$ink-200: rgb(155 155 155);
+$ink-300: rgb(115 115 115);
+$ink-500: rgb(55 55 55);
+$ink-900: rgb(22 22 22);
 
 // background
-$background-primary: rgb(247, 247, 247);
-$background-surface: rgb(255, 255, 255);
-$background-surface-hover: rgb(240, 240, 240);
-$background-surface-active: rgb(225, 225, 225);
-$background-surface-divider: rgb(235, 235, 235);
+$background-primary: rgb(247 247 247);
+$background-surface: rgb(255 255 255);
+$background-surface-hover: rgb(240 240 240);
+$background-surface-active: rgb(225 225 225);
+$background-surface-divider: rgb(235 235 235);
 
 // animation
 $duration-s: 150ms;
@@ -22,9 +21,9 @@ $timing-entrance: cubic-bezier(0, 0, 0.2, 1);
 
 // components
 $box-border: 1px solid rgba($ink-500, 0.12);
-$box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.02), 0 2px 8px 0 rgba(0, 0, 0, 0.02);
+$box-shadow: 0 0 16px 0 rgb(0 0 0 / 2%), 0 2px 8px 0 rgb(0 0 0 / 2%);
 $border-radius: 8px;
 
 // message
-$info-ink: rgb(4, 72, 104);
-$error-ink: rgb(115, 0, 12);
+$info-ink: rgb(4 72 104);
+$error-ink: rgb(115 0 12);

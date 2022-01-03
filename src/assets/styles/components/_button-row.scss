@@ -1,11 +1,8 @@
-//
 // LAYOUT BLOCK | Button Row
 // --------------------------------------------------
-
 .button-row {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
 
   @include desktop {
     flex-direction: row-reverse;
@@ -13,7 +10,7 @@
 
   .mat-button-base {
     flex: 1;
-    margin: 0 0 8px 0;
+    margin: 0 0 8px;
     max-width: 100%;
 
     @include desktop {
