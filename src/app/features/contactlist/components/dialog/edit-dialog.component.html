@@ -6,14 +6,14 @@
         <div class="col">
           <mat-form-field appearance="fill" class="d-block">
             <mat-label>First Name</mat-label>
-            <input type="text" matInput formControlName="firstName" required />
+            <input type="text" id="input_firstname" matInput formControlName="firstName" required />
           </mat-form-field>
         </div>
 
         <div class="col">
           <mat-form-field appearance="fill" class="d-block">
             <mat-label>Last Name</mat-label>
-            <input type="text" matInput formControlName="lastName" required />
+            <input type="text" id="input_lastname" matInput formControlName="lastName" required />
           </mat-form-field>
         </div>
       </div>
@@ -22,7 +22,7 @@
         <div class="col">
           <mat-form-field appearance="fill" class="d-block">
             <mat-label>Phone</mat-label>
-            <input type="text" matInput formControlName="phone" />
+            <input type="text" id="input_phone" matInput formControlName="phone" />
             <div class="material-icons" matPrefix>phone</div>
           </mat-form-field>
         </div>
@@ -30,7 +30,7 @@
         <div class="col">
           <mat-form-field appearance="fill" class="d-block">
             <mat-label>E-Mail</mat-label>
-            <input type="text" matInput formControlName="email" />
+            <input type="text" id="input_email" matInput formControlName="email" />
             <div class="material-icons" matPrefix>mail</div>
           </mat-form-field>
         </div>
@@ -38,7 +38,7 @@
 
       <mat-form-field appearance="fill" class="d-block">
         <mat-label>Address</mat-label>
-        <textarea matInput formControlName="address"></textarea>
+        <textarea id="input_address" matInput formControlName="address"></textarea>
         <div class="material-icons" matPrefix>place</div>
       </mat-form-field>
     </div>

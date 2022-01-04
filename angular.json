@@ -26,12 +26,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico"
-            ],
-            "styles": [
-              "src/assets/styles/main.scss"
-            ],
+            "assets": ["src/favicon.ico"],
+            "styles": ["src/assets/styles/main.scss"],
             "scripts": []
           },
           "configurations": {
@@ -92,29 +88,18 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "polyfills": [
-              "src/polyfills.ts"
-            ],
+            "polyfills": ["src/polyfills.ts"],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": [
-              "scss"
-            ],
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "inlineStyleLanguage": ["scss"],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts"
-            ]
+            "lintFilePatterns": ["src/**/*.ts"]
           }
         },
         "cypress-run": {
