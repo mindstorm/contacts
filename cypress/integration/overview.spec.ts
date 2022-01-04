@@ -1,6 +1,10 @@
 describe('Main', () => {
   it('Visits the initial project page', () => {
     cy.visit('/');
+
+    // Take a snapshot for visual diffing
+    cy.percySnapshot();
+
     cy.contains('Contacts');
 
     cy.get('#button_add').should('be.visible');

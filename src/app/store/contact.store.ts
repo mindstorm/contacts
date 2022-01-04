@@ -16,7 +16,7 @@ const initialState: ContactsState = {
   contacts: environment.production
     ? []
     : [
-        { firstName: 'Max', lastName: 'Zuster 1', phone: '', email: '', address: '', uuid: '525043a8-c2f8-4f89-8ecc-3a264f47348b' },
+        { firstName: 'Maxi', lastName: 'Zuster 1', phone: '', email: '', address: '', uuid: '525043a8-c2f8-4f89-8ecc-3a264f47348b' },
         { firstName: 'Max', lastName: 'Auster 2', phone: '', email: '', address: '', uuid: 'ac26dca8-014c-4fea-b3df-6027378bdcd8' },
         { firstName: 'Max', lastName: 'Muster 3', phone: '', email: '', address: '', uuid: 'ac26dca8-014c-4fea-b3df-6027378bdcd9' },
       ],
