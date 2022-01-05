@@ -19,6 +19,7 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "e2e": "ng e2e",
     "e2e:headless": "percy exec -- ng e2e --headless --watch false",
+    "e2e:visual": "ng e2e --headless --watch false --spec cypress/integration/visual.spec.ts",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
   },
@@ -65,7 +66,7 @@
     "@typescript-eslint/parser": "5.9.0",
     "chalk": "4.1.2",
     "conventional-changelog-cli": "2.2.2",
-    "cypress": "latest",
+    "cypress": "9.2.0",
     "cypress-image-snapshot": "4.0.1",
     "eslint": "8.6.0",
     "eslint-config-prettier": "8.3.0",
