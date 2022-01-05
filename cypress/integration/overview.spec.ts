@@ -2,16 +2,13 @@ describe('Main', () => {
   it('Visits the initial project page', () => {
     cy.visit('/');
 
-    // Take a snapshot for visual diffing
-    cy.percySnapshot();
-
     cy.contains('Contacts');
 
     cy.get('#button_add').should('be.visible');
   });
 
   it('Select a contact item', () => {
-    cy.contains('.list > li > a', 'Auster 2, Max')
+    cy.contains('.list > li > a', 'Appleseed, Johnny')
       .should('have.class', 'mat-ripple')
       .click()
       .within(() => {

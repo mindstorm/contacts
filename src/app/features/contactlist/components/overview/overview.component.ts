@@ -20,6 +20,7 @@ export class OverviewComponent {
 
   public openDialog(): void {
     const dialogRef = this.dialog.open(EditDialogComponent, {
+      id: 'dialog-container_edit',
       width: '500px',
       data: {},
     });
