@@ -41,6 +41,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+/cypress/snapshots/visual.spec.ts/__diff_output__
 
 # System Files
 .DS_Store
