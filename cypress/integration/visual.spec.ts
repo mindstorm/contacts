@@ -6,10 +6,8 @@ describe('Image Snapshot', () => {
 
   it('main', () => {
     // take snapshot
-    cy.percySnapshot();
-
-    // take snapshot
     cy.matchImageSnapshot();
+    cy.percySnapshot();
   });
 
   it('dialog', () => {
