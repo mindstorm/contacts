@@ -5,8 +5,8 @@ describe('Image Snapshot', () => {
   });
 
   it('main', () => {
-    // // Take a snapshot for visual diffing
-    // cy.percySnapshot();
+    // take snapshot
+    cy.percySnapshot();
 
     // take snapshot
     cy.matchImageSnapshot();
