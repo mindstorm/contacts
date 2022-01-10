@@ -6,8 +6,8 @@ describe('Image Snapshot', () => {
 
   it('main', () => {
     // take snapshot
-    cy.matchImageSnapshot();
     cy.percySnapshot();
+    cy.matchImageSnapshot();
   });
 
   it('dialog', () => {
@@ -19,6 +19,7 @@ describe('Image Snapshot', () => {
     cy.get('#input_lastname').type('Bar');
 
     // take snapshot
+    cy.percySnapshot();
     cy.get('#dialog-container_edit').matchImageSnapshot();
   });
 });

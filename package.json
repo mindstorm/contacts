@@ -21,7 +21,8 @@
     "e2e:visual": "ng e2e --spec cypress/integration/visual.spec.ts",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "cypress:run:visual": "percy exec -- cypress run --spec cypress/integration/visual.spec.ts",
+    "cypress:run:visual": "cypress run --spec cypress/integration/visual.spec.ts",
+    "cypress:run:visual:percy": "percy exec -- cypress run --spec cypress/integration/visual.spec.ts",
     "cypress:run:visual:update": "cypress run --spec cypress/integration/visual.spec.ts --env updateSnapshots=true"
   },
   "private": true,
