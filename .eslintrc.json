@@ -34,7 +34,9 @@
           {
             "groups": [["^\\u0000"], ["^@angular/core", "^@angular"], ["^@angular/material", "^@angular/cdk"], ["^@?\\w"], ["^src", "^\\."]]
           }
-        ]
+        ],
+        "@typescript-eslint/member-ordering": "warn",
+        "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }]
       }
     }
   ]
