@@ -1,19 +1,19 @@
 // LAYOUT | APP
 // --------------------------------------------------
 body {
-  margin: 0;
-  min-width: 375px;
-  background-color: $background-primary;
-  font-size: 16px;
-  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  background-color: $background-primary;
+  min-width: 375px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
+  transition: color $duration-s $timing-entrance;
   color: $ink-200;
   text-decoration: none;
-  transition: color $duration-s $timing-entrance;
 
   &:active,
   &:visited,

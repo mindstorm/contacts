@@ -2,14 +2,14 @@
 // --------------------------------------------------
 .back {
   display: flex;
-  margin-bottom: 20px;
   align-items: center;
+  margin-bottom: 20px;
 
   &__link {
     display: inline-flex;
     margin-right: 8px;
-    padding-right: 8px;
     border-right: $box-border;
+    padding-right: 8px;
 
     @include desktop {
       display: none;

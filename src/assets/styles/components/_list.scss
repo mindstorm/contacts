@@ -3,14 +3,14 @@
 .list {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   margin: 0;
-  padding: 0;
-  width: 100%;
+  box-shadow: $box-shadow;
   border: $box-border;
   border-radius: $border-radius;
   background: $background-surface;
-  box-shadow: $box-shadow;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
   list-style: none;
 
   li + li {
@@ -24,8 +24,8 @@
 
   &__item {
     display: block;
-    padding: 16px 24px;
     transition: background-color $duration-s $timing-default;
+    padding: 16px 24px;
 
     &:is(a) {
       color: currentColor;
@@ -48,8 +48,8 @@
   }
 
   &__divider {
-    padding: 8px 24px;
     background-color: $background-surface-divider;
+    padding: 8px 24px;
     font-weight: bold;
     font-size: 12px;
     line-height: 1;

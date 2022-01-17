@@ -8,8 +8,8 @@
 
   &-value {
     display: flex;
-    color: $ink-900;
     flex-wrap: wrap;
+    color: $ink-900;
 
     .material-icons {
       margin-right: 8px;
@@ -19,7 +19,7 @@
 
   & + & {
     margin-top: 16px;
-    padding-top: 16px;
     border-top: $box-border;
+    padding-top: 16px;
   }
 }
