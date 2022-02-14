@@ -113,6 +113,7 @@ describe('OverviewComponent', () => {
   it('click on item & change the route', fakeAsync(() => {
     // first element
     const listElement: DebugElement = debugElement.query(By.css('.list__item'));
+
     expect(listElement.classes).not.toHaveProperty('is-active');
 
     // click on the list element
@@ -133,6 +134,7 @@ describe('OverviewComponent', () => {
 
     // click button
     const button: DebugElement = debugElement.query(By.css('#button_add'));
+
     button.nativeElement.click();
 
     expect(component.openDialog).toHaveBeenCalled();

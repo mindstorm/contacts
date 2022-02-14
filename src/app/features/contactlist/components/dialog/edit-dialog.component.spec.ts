@@ -47,6 +47,7 @@ describe('EditDialogComponent', () => {
 
     // click button
     const button: DebugElement = debugElement.query(By.css('#button_cancel'));
+
     button.nativeElement.click();
 
     // should return empty value
